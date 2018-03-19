@@ -55,7 +55,7 @@ Returns the most recent exchange rate data. Pass all parameters via `params` has
 Because of a tuple you can do kind of "pattern matching":
 
 ```clojure
-(let [status body _]
+(let [[status body _] (:currencylayer/get-live {:access_key "asdf"} ["EUR" "CZK"])]
   (case status
     :ok (process-currencies body)
     :error-101 (missing-auth-key body)
