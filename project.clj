@@ -11,7 +11,8 @@
                  [io.aviso/toolchest "0.1.5"]]
 
   :profiles {:dev {:plugins [[lein-cloverage "1.0.10"]
-                             [lein-kibit "0.1.6"]]
+                             [lein-kibit "0.1.6"]
+                             [jonase/eastwood "0.2.5"]]
                    :dependencies [[clj-http-fake "1.0.3"]
                                   [org.clojure/clojure "1.9.0"]]
                    :source-paths ["src" "dev/src"]}}
