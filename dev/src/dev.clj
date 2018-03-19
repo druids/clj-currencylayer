@@ -1,3 +1,3 @@
 (ns dev
   (:require
-    [clj-currencylayer.core :as currencylayer]))
+    [clj-currencylayer.core :as cl]))
