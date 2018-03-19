@@ -1,4 +1,4 @@
-(defproject clj-currencylayer "0.2.0"
+(defproject clj-currencylayer "0.1.0"
   :description "A client for currencylayer.com API based on clj-http.client"
   :url "https://github.com/druids/clj-currencylayer"
   :license {:name "MIT License"
