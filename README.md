@@ -24,7 +24,7 @@ All functions are designed to return errors instead of throwing exceptions (exce
 All API calls return a tuple within following structure: `[:keyword body response]` where`:keyword` can be:
 - :ok when a response is a success and parsed
 - :error-XXX when a response is parsed but it's an error response (where XXX is an error code from
-  https://currencylayer.com/documentation#error\_codes)
+  [error codes](https://currencylayer.com/documentation#error\_codes))
 - :error-unmarshalling when a response is not a valid JSON
 
 A `body` is a parsed body and `response` is an original response.
