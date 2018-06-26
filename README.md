@@ -12,7 +12,7 @@ Leiningen/Boot
 --------------
 
 ```clojure
-[clj-currencylayer "0.1.0"]
+[clj-currencylayer "0.2.0"]
 ```
 
 
