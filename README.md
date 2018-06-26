@@ -40,7 +40,7 @@ To be able to run examples this line is needed:
 Returns the most recent exchange rate data. Pass all parameters via `params` hash-map.
 
 ```clojure
-(:currencylayer/get-live {:access_key "asdf"})
+(currencylayer/get-live {:access_key "asdf", :source "USD", :currencies ["EUR" "CZK"]})
 ;; [:ok
 ;;  {:success true, :timestamp 1521448156, :source "USD", :quotes {:USDCZK 20.7104, :USDEUR 0.814495}, ...
 ;;  {:request-time 386, ...
@@ -49,13 +49,13 @@ Returns the most recent exchange rate data. Pass all parameters via `params` has
 `:currencies` are joined automatically, thus you can pass them as a sequence
 
 ```clojure
-(:currencylayer/get-live {:access_key "asdf"} ["EUR" "CZK"])
+(currencylayer/get-live {:access_key "asdf"} ["EUR" "CZK"])
 ```
 
 Because of a tuple you can do kind of "pattern matching":
 
 ```clojure
-(let [[status body _] (:currencylayer/get-live {:access_key "asdf"} ["EUR" "CZK"])]
+(let [[status body _] (:currencylayer/get-live {:access_key "asdf", :source "EUR", :currencies ["CZK"]})]
   (case status
     :ok (process-currencies body)
     :error-101 (missing-auth-key body)
